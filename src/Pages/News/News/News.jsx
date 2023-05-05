@@ -9,7 +9,7 @@ const News = () => {
     const news = useLoaderData();
     const {title, details, image_url , category_id } = news;
 
-    useSetTitle('News')
+    useSetTitle('News Details')
 
     return (
         <div>
