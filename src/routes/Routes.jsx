@@ -1,6 +1,5 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
-import Category from "../Pages/Home/Category/Category";
 import NewsLayout from "../layouts/NewsLayout";
 import News from "../Pages/News/News/News";
 import LoginLayout from "../layouts/LoginLayout";
@@ -8,6 +7,7 @@ import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import PrivetRoute from "./PrivetRoute";
 import Termes from "../Pages/Shared/Terms/Termes";
+import Home from "../Pages/Home/Home/Home";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         element: <Main></Main>,
         children: [
             
-            {path: ':id' , element: <Category></Category> , loader: ({params}) => fetch(`https://the-news-dragon-server-bishawnath07.vercel.app/categories/${params.id}`) }
+            {path: ':id' , element: <Home></Home> , loader: ({params}) => fetch(`https://the-news-dragon-server-bishawnath07.vercel.app/categories/${params.id}`) }
         ]
     },
     {

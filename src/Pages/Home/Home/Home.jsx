@@ -1,10 +1,12 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import NewsCart from '../NewsCart/NewsCart';
+import useSetTitle from '../../../Hook/useSetTitle';
 
-const Category = () => {
+const Home = () => {
     const {id} = useParams();
     const categoryNews = useLoaderData();
+    useSetTitle('Home')
     return (
         <div>
            { id && <h4>this  category News :{categoryNews.length}</h4>}
@@ -18,4 +20,4 @@ const Category = () => {
     );
 };
 
-export default Category;
+export default Home;
