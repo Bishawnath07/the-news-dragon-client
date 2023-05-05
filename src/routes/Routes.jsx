@@ -37,14 +37,14 @@ const router = createBrowserRouter([
         element: <Main></Main>,
         children: [
             
-            {path: ':id' , element: <Category></Category> , loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`) }
+            {path: ':id' , element: <Category></Category> , loader: ({params}) => fetch(`https://the-news-dragon-server-bishawnath07.vercel.app/categories/${params.id}`) }
         ]
     },
     {
         path: 'news',
         element: <NewsLayout></NewsLayout>,
         children: [
-            {path: ':id' , element: <PrivetRoute><News></News></PrivetRoute> , loader: ({params}) => fetch (`http://localhost:5000/news/${params.id}`)}
+            {path: ':id' , element: <PrivetRoute><News></News></PrivetRoute> , loader: ({params}) => fetch (`https://the-news-dragon-server-bishawnath07.vercel.app/news/${params.id}`)}
         ]
     }
 ])
